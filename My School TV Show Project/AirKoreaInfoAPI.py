@@ -108,7 +108,7 @@ def airKorea():
     print(f"[{datetime.now()}] 미세먼지 정보 업데이트 완료")
 
 airKorea()
-schedule.every(600).second.do(airKorea) # 600초에 한번 실행
+schedule.every(600).seconds.do(airKorea) # 600초에 한번 실행
 
 while True:
     schedule.run_pending()
