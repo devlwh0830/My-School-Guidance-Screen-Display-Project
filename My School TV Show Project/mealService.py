@@ -11,7 +11,7 @@ def MealService(shoolCode:str, educationCode:str, date:str):
 
     # API 요청 인자를 입력하기
     params = { 
-        "KEY" : "706d7a182fe345079eb30c83577d19d7", # 인증키 / 필수
+        "KEY" : "API KEY HERE", # 인증키 / 필수
         "Type":"json", # 호물 문서 / 필수
         "pIndex":1, # 페이지 위치 / 필수
         "pSize":100, # 페이지 당 신청 숫자 / 필수
