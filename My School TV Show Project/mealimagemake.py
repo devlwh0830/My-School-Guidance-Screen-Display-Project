@@ -3,7 +3,7 @@ from PIL import Image,ImageDraw,ImageFont
 import mealService
 
 # mealService 파일에서 MealService함수를 이용하여 정보 받아오기 그리고 meal변수에 담아주기
-meal = mealService.MealService("7531423","J10","20230512")
+meal = mealService.MealService("학교코드","교육청코드","날짜(8자리)")
 
 # 베이스가 되는 이미지 가져오기
 target_image = Image.open('.\\images\\baseimages\\mealService.png') #일단 기본배경폼 이미지를 open 합니다.
