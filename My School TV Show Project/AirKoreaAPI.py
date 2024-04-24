@@ -7,7 +7,7 @@ print("경기도 성남시 대기질 정보 불러오기를 시작 합니다. (1
 
 def airKorea():
     url = "http://apis.data.go.kr/B552584/ArpltnInforInqireSvc/getMsrstnAcctoRltmMesureDnsty" # API URL
-    key = "개인키" # API 접근 보안 키
+    key = "ROzLzalbkICLJf7ClZsO3Dd2UKL3bceROmPaOfbnqFVcXGqYTp2A6PDofvl3hmqg7p3jIgaa0M+LUkrX5KKcEQ==" # API 접근 보안 키
 
     params = {
         "returnType" : "json", # JSON 형식
@@ -27,11 +27,11 @@ def airKorea():
         times = i["dataTime"] # 측정 시각변수 저장
         break
 
-    target_image = Image.open(.\\images\\baseimages\\test.png') # 대기질 베이스 이미지 불러오기
+    target_image = Image.open('.\\images\\baseimages\\test.png') # 대기질 베이스 이미지 불러오기
     fontsFolder = '.\\images\\baseimages\\경기천년체\\TTF\\경기천년제목_Medium.ttf' #글자로 쓸 폰트 경로
-    selectedFont =ImageFont.truetype(os.path.join(fontsFolder,fontsFolder),120) #폰트경로과 사이즈를 설정해줍니다.
-    selectedFont1 =ImageFont.truetype(os.path.join(fontsFolder,fontsFolder),90) #폰트경로과 사이즈를 설정해줍니다.
-    selectedFont2 =ImageFont.truetype(os.path.join(fontsFolder,fontsFolder),55) #폰트경로과 사이즈를 설정해줍니다.
+    selectedFont =ImageFont.truetype(fontsFolder,120) #폰트경로과 사이즈를 설정해줍니다.
+    selectedFont1 =ImageFont.truetype(fontsFolder,90) #폰트경로과 사이즈를 설정해줍니다.
+    selectedFont2 =ImageFont.truetype(fontsFolder,55) #폰트경로과 사이즈를 설정해줍니다.
     draw =ImageDraw.Draw(target_image)
 
     #========================================================================================== 미세먼지 측정 값에 따른 분류
@@ -105,7 +105,7 @@ def airKorea():
 
     draw.text((50,1020),f"{times}",fill="white",font=selectedFont2,align='left')
 
-    target_image.save(".\\images\\sky.png")
+    target_image.save(".\\images\\before_image\\sky.png")
     target_image.close()
 
     print(f"[{datetime.now()}] 미세먼지 정보 업데이트 완료")
